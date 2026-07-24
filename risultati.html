@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo risultati SmartStock EOQ">
+    <title>Risultati - SmartStock EOQ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+    <div>
+        <span class="brand">SmartStock EOQ</span>
+        <p class="subtitle">Risultati dell'analisi · Demo statica</p>
+    </div>
+    <a class="button button-secondary" href="index.html">Torna alla dashboard</a>
+</header>
+
+<main class="container">
+    <div class="alert alert-success">Prodotto analizzato correttamente — dati dimostrativi</div>
+
+    <section class="detail-header">
+        <div>
+            <p class="eyebrow">Ricambi auto</p>
+            <h1>Cartablet Android</h1>
+            <p>10 pollici, 8GB RAM, 64GB ROM</p>
+        </div>
+        <div class="code big">RIC-004</div>
+    </section>
+
+    <section class="section-header">
+        <div>
+            <h2>Confronto su tre anni di esercizio</h2>
+            <p>La tabella evidenzia il passaggio dal modello EOQ classico al modello integrato con scorta di sicurezza.</p>
+        </div>
+    </section>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+            <tr>
+                <th>Anno</th>
+                <th>Domanda annua</th>
+                <th>EOQ</th>
+                <th>Scorta sicurezza</th>
+                <th>ROP classico</th>
+                <th>ROP con SS</th>
+                <th>Ordini/anno</th>
+                <th>Costo totale stimato</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2023</td><td>1128,00</td><td class="strong">150,20</td><td>21,82</td><td>184,98</td><td class="highlight">206,80</td><td>7,51</td><td>675,90 €</td>
+            </tr>
+            <tr>
+                <td>2024</td><td>1200,00</td><td class="strong">154,92</td><td>26,19</td><td>229,60</td><td class="highlight">255,79</td><td>7,75</td><td>697,14 €</td>
+            </tr>
+            <tr>
+                <td>2025</td><td>1344,00</td><td class="strong">163,95</td><td>35,05</td><td>330,66</td><td class="highlight">365,71</td><td>8,20</td><td>737,78 €</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <section class="result-grid">
+        <article class="info-card">
+            <h3>EOQ</h3>
+            <p>Indica la quantità ottimale da ordinare per ridurre il costo complessivo composto da costi di ordinazione e costi di mantenimento a magazzino.</p>
+        </article>
+        <article class="info-card">
+            <h3>Safety Stock</h3>
+            <p>Introduce una protezione contro l'incertezza della domanda e dei tempi di consegna, riducendo il rischio di rottura di stock.</p>
+        </article>
+        <article class="info-card">
+            <h3>Reorder Point</h3>
+            <p>Definisce il livello di scorta al raggiungimento del quale è opportuno emettere un nuovo ordine di acquisto.</p>
+        </article>
+    </section>
+
+    <section class="analysis-note">
+        <h2>Interpretazione dei risultati</h2>
+        <p>
+            Il modello EOQ classico consente di determinare il lotto ottimale, ma non considera direttamente la variabilità della domanda.
+            L'integrazione della scorta di sicurezza aumenta il punto di riordino e rende il modello più adatto a scenari realistici.
+        </p>
+    </section>
+</main>
+</body>
+</html>

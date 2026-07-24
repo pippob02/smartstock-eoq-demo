@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo statica dell'interfaccia SmartStock EOQ">
+    <title>SmartStock EOQ - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+    <div>
+        <span class="brand">SmartStock EOQ</span>
+        <p class="subtitle">Ottimizzazione digitale delle scorte aziendali · Demo statica</p>
+    </div>
+    <a class="button button-primary" href="inserimento.html">Nuova analisi</a>
+</header>
+
+<main class="container">
+    <section class="hero-card">
+        <div>
+            <p class="eyebrow">PW</p>
+            <h1>Calcolo EOQ, Safety Stock e Punto di Riordino</h1>
+            <p>
+                L'applicazione supporta le decisioni di approvvigionamento attraverso il calcolo del lotto economico
+                di ordinazione, della scorta di sicurezza e del livello di riordino per scenari su tre anni di esercizio.
+            </p>
+        </div>
+        <div class="formula-box">
+            <strong>Formule principali</strong>
+            <span>EOQ = √((2 × D × S) / H)</span>
+            <span>ROP = d × L + SS</span>
+        </div>
+    </section>
+
+    <section class="section-header">
+        <div>
+            <h2>Prodotti analizzati</h2>
+            <p>Ogni prodotto contiene un confronto su tre anni: 2023, 2024 e 2025.</p>
+        </div>
+    </section>
+
+    <section class="grid cards-grid">
+        <article class="card">
+            <div class="card-header">
+                <div>
+                    <p class="tag">Componentistica</p>
+                    <h3>Bulloneria industriale</h3>
+                </div>
+                <span class="code">MAT-002</span>
+            </div>
+            <p class="description">Componente di consumo utilizzato in processi produttivi e assemblaggio.</p>
+            <div class="mini-stats">
+                <div><span>Ultimo anno</span><strong>2025</strong></div>
+                <div><span>EOQ</span><strong>1159,31</strong></div>
+                <div><span>ROP</span><strong>1117,74</strong></div>
+            </div>
+            <div class="card-actions">
+                <a class="button button-secondary" href="risultati.html">Visualizza risultati</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-header">
+                <div>
+                    <p class="tag">Ricambi auto</p>
+                    <h3>Filtro olio motore</h3>
+                </div>
+                <span class="code">RIC-001</span>
+            </div>
+            <p class="description">Materiale a domanda indipendente utilizzato per interventi di manutenzione periodica.</p>
+            <div class="mini-stats">
+                <div><span>Ultimo anno</span><strong>2025</strong></div>
+                <div><span>EOQ</span><strong>518,46</strong></div>
+                <div><span>ROP</span><strong>365,71</strong></div>
+            </div>
+            <div class="card-actions">
+                <a class="button button-secondary" href="risultati.html">Visualizza risultati</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-header">
+                <div>
+                    <p class="tag">Packaging</p>
+                    <h3>Imballaggio cartone standard</h3>
+                </div>
+                <span class="code">PKG-003</span>
+            </div>
+            <p class="description">Materiale necessario per la spedizione dei prodotti finiti.</p>
+            <div class="mini-stats">
+                <div><span>Ultimo anno</span><strong>2025</strong></div>
+                <div><span>EOQ</span><strong>861,82</strong></div>
+                <div><span>ROP</span><strong>420,51</strong></div>
+            </div>
+            <div class="card-actions">
+                <a class="button button-secondary" href="risultati.html">Visualizza risultati</a>
+            </div>
+        </article>
+    </section>
+
+    <section class="analysis-note">
+        <h2>Informazioni sulla demo</h2>
+        <p>
+            Questa pubblicazione riproduce l'interfaccia del progetto SmartStock EOQ con dati dimostrativi.
+            Il calcolo Java, la persistenza PostgreSQL e la logica Spring Boot sono disponibili nel progetto completo scaricabile separatamente.
+        </p>
+    </section>
+</main>
+</body>
+</html>

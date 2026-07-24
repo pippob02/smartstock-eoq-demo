@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo del form SmartStock EOQ">
+    <title>Nuova analisi - SmartStock EOQ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+    <div>
+        <span class="brand">SmartStock EOQ</span>
+        <p class="subtitle">Inserimento dati prodotto · Demo statica</p>
+    </div>
+    <a class="button button-secondary" href="index.html">Torna alla dashboard</a>
+</header>
+
+<main class="container narrow">
+    <section class="page-title">
+        <p class="eyebrow">Nuova simulazione</p>
+        <h1>Inserisci i dati di partenza</h1>
+        <p>La demo mostra il flusso dell'interfaccia; il pulsante conduce a risultati dimostrativi.</p>
+    </section>
+
+    <form class="form-card" id="demo-form">
+        <div class="form-section">
+            <h2>Dati prodotto</h2>
+            <div class="form-grid">
+                <label>
+                    Codice prodotto
+                    <input type="text" name="code" value="RIC-004" required>
+                </label>
+                <label>
+                    Nome prodotto
+                    <input type="text" name="name" value="Cartablet Android" required>
+                </label>
+                <label>
+                    Categoria
+                    <input type="text" name="category" value="Ricambi Auto">
+                </label>
+                <label class="full">
+                    Descrizione
+                    <textarea name="description" rows="3">10 pollici, 8GB RAM, 64GB ROM</textarea>
+                </label>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Parametri EOQ e riordino</h2>
+            <div class="form-grid">
+                <label>
+                    Domanda annua D
+                    <input type="number" step="0.01" name="annualDemand" value="1200" required>
+                </label>
+                <label>
+                    Costo setup S per ordine (€)
+                    <input type="number" step="0.01" name="setupCost" value="45" required>
+                </label>
+                <label>
+                    Costo mantenimento H (€)
+                    <input type="number" step="0.01" name="holdingCost" value="4.50" required>
+                </label>
+                <label>
+                    Domanda media giornaliera d
+                    <input type="number" step="0.01" name="averageDailyDemand" value="32.8" required>
+                </label>
+                <label>
+                    Lead time L in giorni
+                    <input type="number" name="leadTimeDays" value="7" required>
+                </label>
+                <label>
+                    Deviazione standard domanda
+                    <input type="number" step="0.01" name="demandStdDev" value="6" required>
+                </label>
+                <label>
+                    Livello di servizio (%)
+                    <select name="serviceLevel">
+                        <option value="90">90%</option>
+                        <option value="95" selected>95%</option>
+                        <option value="98">98%</option>
+                        <option value="99">99%</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <a class="button button-secondary" href="index.html">Annulla</a>
+            <button class="button button-primary" type="submit">Visualizza risultati demo</button>
+        </div>
+    </form>
+</main>
+<script>
+    document.getElementById('demo-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        window.location.href = 'risultati.html';
+    });
+</script>
+</body>
+</html>
